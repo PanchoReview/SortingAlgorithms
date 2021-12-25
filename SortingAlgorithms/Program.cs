@@ -16,6 +16,22 @@ namespace SortingAlgorithms
             LogMergeSort(new int[] { 4, 9, 2, 1, 6, 3, 8 });
             LogMergeSort(new int[] { 8, 9, 10, -5, -4, -2, 7, 15, 1080, 208, 597, 475, 784, 39 });
             LogMergeSort(new int[] { -854, 1583, -12, 987, 1, 2, 3, 3, 4, 5879, 1897585, 8, 8, 9, 10, -5, -4, -2, 7, 15, 1080, 208, 597, 475, 784, 39 });
+
+            LogBubbleSort(new int[] { 4, 9, 2, 1, 6, 3, 8 });
+            LogBubbleSort(new int[] { 8, 9, 10, -5, -4, -2, 7, 15, 1080, 208, 597, 475, 784, 39 });
+            LogBubbleSort(new int[] { -854, 1583, -12, 987, 1, 2, 3, 3, 4, 5879, 1897585, 8, 8, 9, 10, -5, -4, -2, 7, 15, 1080, 208, 597, 475, 784, 39 });
+        }
+
+        private static void LogBubbleSort(int[] list)
+        {
+            BubbleSort.Execute(list);
+
+            string array = "";
+
+            foreach (var item in list)
+                array = $"{array} {item}";
+
+            Console.WriteLine($"Bubble Sort: {array}");
         }
 
         private static void LogMergeSort(int[] list)
