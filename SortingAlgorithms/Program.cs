@@ -35,6 +35,27 @@ namespace SortingAlgorithms
             LogSelectionSort(new int[] { 4, 9, 2, 1, 6, 3, 8 });
             LogSelectionSort(new int[] { 8, 9, 10, -5, -4, -2, 7, 15, 1080, 208, 597, 475, 784, 39 });
             LogSelectionSort(new int[] { -854, 1583, -12, 987, 1, 2, 3, 3, 4, 5879, 1897585, 8, 8, 9, 10, -5, -4, -2, 7, 15, 1080, 208, 597, 475, 784, 39 });
+
+            Console.WriteLine("");
+
+            LogBinarySearch(new int[] { 4, 9, 2, 1, 6, 3, 8 }, 4);
+            LogBinarySearch(new int[] { 8, 9, 10, -5, -4, -2, 7, 15, 1080, 208, 597, 475, 784, 39 }, 68);
+            LogBinarySearch(new int[] { -854, 1583, -12, 987, 1, 2, 3, 3, 4, 5879, 1897585, 8, 8, 9, 10, -5, -4, -2, 7, 15, 1080, 208, 597, 475, 784, 39 }, 5879);
+        }
+
+        private static void LogBinarySearch(int[] list, int number)
+        {
+            var numerFound = BinarySearch.Execute(list, number);
+
+            string array = "";
+
+            foreach (var item in list)
+                array = $"{array} {item}";
+
+            if (numerFound)
+                Console.WriteLine($"Binary search: {number} was found in array [ {array} ]");
+            else
+                Console.WriteLine($"Binary search: {number} was NOT found in array [ {array} ]");
         }
 
         private static void LogSelectionSort(int[] list)
