@@ -29,6 +29,24 @@ namespace SortingAlgorithms
             LogInsertionSort(new int[] { 4, 9, 2, 1, 6, 3, 8 });
             LogInsertionSort(new int[] { 8, 9, 10, -5, -4, -2, 7, 15, 1080, 208, 597, 475, 784, 39 });
             LogInsertionSort(new int[] { -854, 1583, -12, 987, 1, 2, 3, 3, 4, 5879, 1897585, 8, 8, 9, 10, -5, -4, -2, 7, 15, 1080, 208, 597, 475, 784, 39 });
+
+            Console.WriteLine("");
+
+            LogSelectionSort(new int[] { 4, 9, 2, 1, 6, 3, 8 });
+            LogSelectionSort(new int[] { 8, 9, 10, -5, -4, -2, 7, 15, 1080, 208, 597, 475, 784, 39 });
+            LogSelectionSort(new int[] { -854, 1583, -12, 987, 1, 2, 3, 3, 4, 5879, 1897585, 8, 8, 9, 10, -5, -4, -2, 7, 15, 1080, 208, 597, 475, 784, 39 });
+        }
+
+        private static void LogSelectionSort(int[] list)
+        {
+            SelectionSort.Execute(list);
+
+            string array = "";
+
+            foreach (var item in list)
+                array = $"{array} {item}";
+
+            Console.WriteLine($"Selection Sort: {array}");
         }
 
         private static void LogInsertionSort(int[] list)
