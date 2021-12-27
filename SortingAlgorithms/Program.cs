@@ -41,7 +41,20 @@ namespace SortingAlgorithms
             LogBinarySearch(new int[] { 4, 9, 2, 1, 6, 3, 8 }, 4);
             LogBinarySearch(new int[] { 8, 9, 10, -5, -4, -2, 7, 15, 1080, 208, 597, 475, 784, 39 }, 68);
             LogBinarySearch(new int[] { -854, 1583, -12, 987, 1, 2, 3, 3, 4, 5879, 1897585, 8, 8, 9, 10, -5, -4, -2, 7, 15, 1080, 208, 597, 475, 784, 39 }, 5879);
+
+            Console.WriteLine("");
+
+            LogTortoiseAndHare(new int[] {1, 2, 3, 4, 5, 6, 6, 7 });
+            LogTortoiseAndHare(new int[] { 1, 5, 3, 6, 10, 4, 0, 7, 1, 8, 9 });
         }
+
+        private static void LogTortoiseAndHare(int[] array)
+        {
+            var duplicate = TortoiseAndHare.Execute(array);
+
+            Console.WriteLine($"The duplicate number is {duplicate}");
+        }
+
 
         private static void LogBinarySearch(int[] list, int number)
         {
